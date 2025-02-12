@@ -14,7 +14,7 @@ jobs:
   test:
     strategy:
       matrix:
-        node: [ '22' ]
+        node: [ '22', '20' ]
     name: test/node ${{ matrix.node }}/ubuntu-latest
     runs-on: ubuntu-latest
     steps:
