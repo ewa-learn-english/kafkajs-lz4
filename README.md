@@ -21,6 +21,13 @@ import LZ4Codec from 'kafkajs-lz4';
 CompressionCodecs[CompressionTypes.LZ4] = new LZ4Codec().codec;
 ```
 
+## Development
+
+```bash
+$ yarn install
+$ yarn test
+```
+
 ## Author
 
 Thanks to the original author: [indix](https://github.com/indix) for the initial implementation.
