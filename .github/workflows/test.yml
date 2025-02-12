@@ -14,8 +14,8 @@ jobs:
   test:
     strategy:
       matrix:
-        platform: [ ubuntu-18.04 ]
-        node: [ '14', '12', '10' ]
+        platform: [ ubuntu-22.04 ]
+        node: [ '22', '20', '18', '16', '14', '12', '10' ]
     name: test/node ${{ matrix.node }}/${{ matrix.platform }}
     runs-on: ${{ matrix.platform }}
     steps:
