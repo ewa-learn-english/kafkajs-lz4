@@ -23,7 +23,7 @@ TEST_EXIT=$?
 echo
 
 if [ -z ${DO_NOT_STOP} ]; then
-  docker-compose down --remove-orphans
+  docker compose down --remove-orphans
 fi
 
 exit ${TEST_EXIT}
