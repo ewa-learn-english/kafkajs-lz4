@@ -1,6 +1,6 @@
 {
-  "name": "kafkajs-lz4",
-  "version": "2.0.0-beta.0",
+  "name": "@2l/kafkajs-lz4",
+  "version": "1.0.0",
   "description": "LZ4 compression codec for the KafkaJS library",
   "keywords": [
     "kafka",
@@ -9,26 +9,32 @@
     "lz4",
     "codec"
   ],
-  "homepage": "https://oss.indix.com/",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ewa-learn-english/kafkajs-lz4/blob/main/LICENSE"
+    }
+  ],
+  "homepage": "https://appewa.com/",
   "bugs": {
-    "url": "https://github.com/indix/kafkajs-lz4/issues",
-    "email": "opensource@indix.com"
+    "url": "https://github.com/ewa-learn-english/kafkajs-lz4/issues",
+    "email": "support@appewa.com"
   },
   "license": "MIT",
   "author": {
-    "name": "GP",
-    "email": "gp@indix.com",
-    "url": "https://github.com/paambaati"
+    "name": "r3b-fish",
+    "email": "stas@appewa.com",
+    "url": "https://github.com/r3b-fish"
   },
   "files": [
     "lib/**"
   ],
   "main": "lib/index.js",
-  "repository": "https://github.com/indix/kafkajs-lz4",
+  "repository": "https://github.com/ewa-learn-english/kafkajs-lz4",
   "scripts": {
     "build": "tsc --project './tsconfig.json'",
     "build:test": "tsc --project './tsconfig.test.json'",
-    "lint": "eslint \"./src/**/*.ts\" \"./test/**/*.ts\" --ext ts --cache --report-unused-disable-directives",
+    "lint": "eslint src/**/*.ts test/**/*.ts --cache --report-unused-disable-directives",
     "lint:format": "npm run lint -- --fix",
     "test:local": "ts-node test/*.test.ts",
     "test": "./scripts/testWithKafka.sh \"yarn test:local --ci --maxWorkers=4 --no-watchman\"",
@@ -36,24 +42,27 @@
     "prepublishOnly": "rm -rf lib/ && yarn build"
   },
   "dependencies": {
-    "lz4-asm": "0.4.2"
+    "lz4-napi": "^2.8.0"
   },
   "devDependencies": {
-    "@types/node": "^14.14.10",
-    "@types/tape": "^4.2.33",
-    "@typescript-eslint/eslint-plugin": "4.9.0",
-    "@typescript-eslint/parser": "4.9.0",
-    "eslint": "7.14.0",
-    "eslint-config-prettier": "6.15.0",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-prettier": "3.2.0",
-    "kafkajs": "^1.15.0",
-    "prettier": "^2.2.1",
+    "@eslint/eslintrc": "^3.2.0",
+    "typescript-eslint": "^8.24.0",
+    "@eslint/js": "^9.20.0",
+    "@types/node": "^22.13.1",
+    "@types/tape": "^5.8.1",
+    "@typescript-eslint/eslint-plugin": "8.24.0",
+    "@typescript-eslint/parser": "8.24.0",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "10.0.1",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-prettier": "5.2.3",
+    "kafkajs": "^2.0.0",
+    "prettier": "^3.5.0",
     "tape": "^5.0.1",
-    "ts-node": "^9.1.0",
-    "typescript": "4.1.2"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   }
 }

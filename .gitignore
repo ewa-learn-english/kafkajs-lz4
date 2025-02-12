@@ -1,4 +1,5 @@
 node_modules/
+lib/
 .eslintcache
 yarn-error.log
 

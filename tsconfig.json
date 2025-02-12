@@ -10,7 +10,7 @@
         "declaration": true,
         "module": "commonjs",
         "moduleResolution": "node",
-        "target": "es2017", // For > Node 8.x
+        "target": "esnext",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "types": [

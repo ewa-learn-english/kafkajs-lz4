@@ -1,6 +1,6 @@
 # kafkajs-lz4
 
-[![Build Status](https://img.shields.io/github/workflow/status/indix/kafkajs-lz4/Test?logo=github-actions&longCache=true&style=flat-square)](https://travis-ci.org/indix/kafkajs-lz4) [![NPM Version](https://img.shields.io/npm/v/kafkajs-lz4.svg?longCache=true&style=flat-square)](https://www.npmjs.com/package/kafkajs-lz4) ![](https://img.shields.io/badge/typescript-4.1-blue.svg?longCache=true&style=flat-square)
+[![Build Status](https://img.shields.io/github/workflow/status/indix/kafkajs-lz4/Test?logo=github-actions&longCache=true&style=flat-square)](https://travis-ci.org/indix/kafkajs-lz4) [![NPM Version](https://img.shields.io/npm/v/kafkajs-lz4.svg?longCache=true&style=flat-square)](https://www.npmjs.com/package/kafkajs-lz4) ![](https://img.shields.io/badge/typescript-5.3-blue.svg?longCache=true&style=flat-square)
 
 TypeScript-ready [lz4](https://www.npmjs.com/package/lz4) compression codec for [KafkaJS](https://www.npmjs.com/package/kafkajs).
 
@@ -9,7 +9,7 @@ TypeScript-ready [lz4](https://www.npmjs.com/package/lz4) compression codec for 
 ## Install
 
 ```bash
-$ yarn add kafkajs-lz4
+$ yarn add @2l/kafkajs-lz4
 ```
 
 ## Usage
@@ -21,20 +21,15 @@ import LZ4Codec from 'kafkajs-lz4';
 CompressionCodecs[CompressionTypes.LZ4] = new LZ4Codec().codec;
 ```
 
-## Options
+## Author
 
-All options are transparently passed on to the [lz4-asm library's compress options](https://www.npmjs.com/package/lz4-asm#lz4compresssource-options).
+Thanks to the original author: [indix](https://github.com/indix) for the initial implementation.
 
-### Example
+## Contributors
 
-To set the highest level of compression for your Kafka messages —
+- [r3b-fish](https://github.com/r3b-fish)
 
-```typescript
-const lz4Codec = new LZ4Codec({
-    preferences: {
-        compressionLevel: 16
-    }
-}).codec;
+## License
 
-CompressionCodecs[CompressionTypes.LZ4] = lz4Codec;
-```
+MIT
+
