@@ -14,17 +14,17 @@ jobs:
   test:
     strategy:
       matrix:
-        platform: [ ubuntu-18.04 ]
-        node: [ '14', '12', '10' ]
-    name: test/node ${{ matrix.node }}/${{ matrix.platform }}
-    runs-on: ${{ matrix.platform }}
+        node: [ '22', '20' ]
+    name: test/node ${{ matrix.node }}/ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: actions/setup-node@master
+    - name: Setup node
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node }}
     - run: npm install -g yarn
     - run: yarn install
     - run: yarn run lint
-    - run: docker-compose pull
+    - run: docker compose pull
     - run: yarn run test

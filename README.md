@@ -4,7 +4,7 @@
 
 TypeScript-ready [lz4](https://www.npmjs.com/package/lz4) compression codec for [KafkaJS](https://www.npmjs.com/package/kafkajs).
 
-ℹ️ Requires Node v10 or above to work.
+ℹ️ Requires Node v20 or above to work.
 
 ## Install
 
@@ -19,6 +19,13 @@ import { CompressionTypes, CompressionCodecs } from 'kafkajs';
 import LZ4Codec from 'kafkajs-lz4';
 
 CompressionCodecs[CompressionTypes.LZ4] = new LZ4Codec().codec;
+```
+
+## Development
+
+```bash
+$ yarn install
+$ yarn test
 ```
 
 ## Author
