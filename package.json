@@ -30,7 +30,10 @@
     "lib/**"
   ],
   "main": "lib/index.js",
-  "repository": "https://github.com/ewa-learn-english/kafkajs-lz4",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewa-learn-english/kafkajs-lz4.git"
+  },
   "scripts": {
     "build": "tsc --project './tsconfig.json'",
     "build:test": "tsc --project './tsconfig.test.json'",
