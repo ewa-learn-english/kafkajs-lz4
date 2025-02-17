@@ -1,4 +1,4 @@
-# kafkajs-lz4
+# @2l/kafkajs-lz4
 
 [![Build Status](https://img.shields.io/github/workflow/status/@2l/kafkajs-lz4/Test?logo=github-actions&longCache=true&style=flat-square)](https://travis-ci.org/@2l/kafkajs-lz4) [![NPM Version](https://img.shields.io/npm/v/@2l/kafkajs-lz4.svg?longCache=true&style=flat-square)](https://www.npmjs.com/package/@2l/kafkajs-lz4) ![](https://img.shields.io/badge/typescript-5.3-blue.svg?longCache=true&style=flat-square)
 
@@ -16,7 +16,7 @@ $ yarn add @2l/kafkajs-lz4
 
 ```typescript
 import { CompressionTypes, CompressionCodecs } from 'kafkajs';
-import LZ4Codec from 'kafkajs-lz4';
+import LZ4Codec from '@2l/kafkajs-lz4';
 
 CompressionCodecs[CompressionTypes.LZ4] = new LZ4Codec().codec;
 ```
@@ -34,9 +34,9 @@ Thanks to the original author: [indix](https://github.com/indix) for the initial
 
 ## Contributors
 
-- [r3b-fish](https://github.com/r3b-fish)
+- [indix](https://github.com/indix) - original author
+- [r3b-fish](https://github.com/r3b-fish) - maintainer
 
 ## License
 
 MIT
-
